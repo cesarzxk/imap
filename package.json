@@ -9,15 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bopen/leaflet-area-selection": "^0.7.0",
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@types/react-leaflet": "^2.8.2",
+    "axios": "^0.27.2",
     "framer-motion": "^6",
     "leaflet": "^1.8.0",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.3.1",
     "react-leaflet": "^4.0.0"
   },
   "devDependencies": {

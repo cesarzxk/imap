@@ -1,12 +1,5 @@
 import { useEffect, useState, useRef, useMemo } from "react";
-import {
-  useMapEvents,
-  Marker,
-  Polygon,
-  Popup,
-  LayersControl,
-  LayerGroup,
-} from "react-leaflet";
+import { useMapEvents, Marker, Polygon } from "react-leaflet";
 
 import { Icon, Point } from "leaflet";
 import { Box, Button } from "@chakra-ui/react";
@@ -21,10 +14,16 @@ export default function MapMarker() {
   const [markers, setMarkers] = useState<markerType[]>([]);
   const [enabledMarkers, setEnabledMarkers] = useState(false);
   const [markerSelected, setMarkerSelected] = useState<number>();
-
   const [polygonMarkers, setPolygonMarkers] = useState<
     { lat: number; lng: number }[]
   >([]);
+
+  function removeMarker() {
+    let newMarkes = markers.slice();
+    newMarkes = markers.filter((item, index) => markerSelected !== index);
+    setMarkerSelected(undefined);
+    setMarkers(newMarkes);
+  }
 
   useEffect(() => {
     markers.length > 0 && setPolygonMarkers([...markers, markers[0]]);
@@ -39,15 +38,6 @@ export default function MapMarker() {
       enabledMarkers && setMarkers([event.latlng, ...markers]);
     },
   });
-
-  function removeMarker() {
-    let newMarkes = markers.slice();
-
-    newMarkes = markers.filter((item, index) => markerSelected !== index);
-
-    setMarkerSelected(undefined);
-    setMarkers(newMarkes);
-  }
 
   const blueMarker = new Icon({
     iconUrl: "/marker.svg",
