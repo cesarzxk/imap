@@ -1,11 +1,11 @@
-import { Box, Text, VStack } from "@chakra-ui/react";
-import "leaflet/dist/leaflet.css";
+import { Box, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
-
 import { MapContainer, TileLayer, CircleMarker, Popup } from "react-leaflet";
+
 import { useMapContext } from "../../context/MapContext";
-import MapMarkers from "../MapMarkers";
+import MapAreaSelector from "../../services/MapAreaSelector";
 import styles from "./Map.module.css";
+import "leaflet/dist/leaflet.css";
 
 type countryType = {
   name: string;
@@ -29,7 +29,7 @@ export default function Map() {
 
   return (
     <MapContainer
-      center={{ lat: 55, lng: 10 }}
+      center={{ lat: 35, lng: 20 }}
       className={styles.map}
       zoom={2}
       doubleClickZoom={false}
@@ -42,7 +42,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <MapMarkers />
+        <MapAreaSelector />
 
         {countries?.map((country: countryType) => {
           return (

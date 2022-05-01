@@ -4,6 +4,7 @@ import SendButton from "../SendButton";
 import { GrCircleInformation } from "react-icons/gr";
 import CustomModal from "../Modal";
 import { useState } from "react";
+import Info from "../Info";
 
 export default function Header() {
   const { getFiltredCountries, polygonMarkers } = useMapContext();
@@ -31,6 +32,7 @@ export default function Header() {
         <Image src="./logo.svg" />
         <Spacer />
 
+        <Info />
 
         <Box marginRight="2rem">
           <SendButton
