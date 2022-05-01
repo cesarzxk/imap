@@ -4,8 +4,11 @@ import { filterCountriesApi, getCountriesApi } from "../services/api";
 
 type mapContextData = {
   getAllCountries: () => Promise<void>;
-  getFiltredCountries: (coordinates: coordinatesType) => Promise<200 | 500>;
+  getFiltredCountries: () => Promise<200 | 500>;
+  setPolygonMarkers: (markers: polygonType[]) => void;
   countries: countryType[];
+  polygonMarkers: polygonType[];
+  countriesFiltred: countryType[];
 };
 
 export const MapContext = createContext({} as mapContextData);
@@ -23,12 +26,26 @@ type countryType = {
   };
 };
 
-type coordinatesType = coordinateType[];
-
-type coordinateType = number[];
+type polygonType = {
+  lat: number;
+  lng: number;
+};
 
 export function MapProvider({ children }: mapProviderProps) {
   const [countries, setCountries] = useState<countryType[]>([]);
+  const [polygonMarkers, setPolygonMarkers] = useState<polygonType[]>([]);
+
+  const [countriesFiltred, setCountriesFiltred] = useState<countryType[]>([]);
+
+  function markers2Coordinates() {
+    const newCoordinates = polygonMarkers.map((marker) => {
+      return [marker.lng, marker.lat];
+    });
+
+    newCoordinates.push();
+
+    return newCoordinates;
+  }
 
   async function getAllCountries() {
     try {
@@ -39,17 +56,16 @@ export function MapProvider({ children }: mapProviderProps) {
     }
   }
 
-  async function getFiltredCountries(coordinates: coordinatesType) {
+  async function getFiltredCountries() {
     try {
       const { data } = await filterCountriesApi.post("", {
-        data: {
-          coordinates: coordinates,
-        },
+        coordinates: markers2Coordinates(),
       });
 
-      console.log(data);
+      setCountriesFiltred(data);
       return 200;
     } catch (e) {
+      console.log(500);
       return 500;
     }
   }
@@ -59,7 +75,10 @@ export function MapProvider({ children }: mapProviderProps) {
       value={{
         getAllCountries,
         getFiltredCountries,
+        setPolygonMarkers,
         countries,
+        polygonMarkers,
+        countriesFiltred,
       }}
     >
       {children}

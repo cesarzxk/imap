@@ -1,13 +1,14 @@
-import { Box, Flex, HStack, Link, Text } from "@chakra-ui/react";
+import { Box, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <Flex
+    <VStack
       alignContent="center"
       justifyContent="center"
       w="100%"
-      marginTop="2rem"
+      h="6rem"
+      bg="linear-gradient(180deg, #FFFFFF 0%, #DEDEDE 100%)"
       borderTop="1px solid #ddd"
     >
       <Link href="https://github.com/cesarzxk">
@@ -18,6 +19,6 @@ export default function Footer() {
           </Box>
         </HStack>
       </Link>
-    </Flex>
+    </VStack>
   );
 }

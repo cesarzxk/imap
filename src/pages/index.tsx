@@ -1,15 +1,20 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Center, Flex, Spinner } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SendButton from "../components/SendButton";
+import { useMapContext } from "../context/MapContext";
 
 import styles from "./Home.module.css";
 
 const Map = dynamic(() => import("../components/Map"), {
-  loading: () => <p>A map is loading</p>,
+  loading: () => (
+    <Center h="86vh" w="100vw">
+      <Spinner size="xl" color="#0011ff" />
+    </Center>
+  ),
   ssr: false,
 });
 
@@ -25,10 +30,6 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
         <Map />
-
-        <Box position="absolute" bottom="10%">
-          <SendButton onClick={() => {}} title="Selecionar" />
-        </Box>
       </main>
 
       <Footer />
