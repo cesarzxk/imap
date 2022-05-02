@@ -9,7 +9,11 @@ type SendButtonType = {
 
 export default function SendButton(props: SendButtonType) {
   return props.isLoading ? (
-    <Button borderRadius="25px" colorScheme={"blackAlpha"}>
+    <Button
+      data-testid="loadingButton"
+      borderRadius="25px"
+      colorScheme={"blackAlpha"}
+    >
       <Spinner colorScheme={"gray"} />
     </Button>
   ) : (

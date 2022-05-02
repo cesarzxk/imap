@@ -14,6 +14,11 @@ type verticesProps = {
   setMarkerSelected: (select: number) => void;
 };
 
+type newMarkerProps = {
+  marker: markerType;
+  index: number;
+};
+
 export default function Vertices({
   markerSelected,
   markers,
@@ -32,23 +37,18 @@ export default function Vertices({
     iconSize: new Point(10, 10),
   });
 
-  const NewMarker = ({
-    marker,
-    index,
-  }: {
-    marker: markerType;
-    index: number;
-  }) => {
+  const NewVertice = (props: newMarkerProps) => {
     const markerRef = useRef<any>();
+
     const eventHandlers = useMemo(
       () => ({
         dragend() {
           let newMarkes = markers.slice();
-          newMarkes[index] = markerRef.current.getLatLng();
+          newMarkes[props.index] = markerRef.current.getLatLng();
           setMarkers(newMarkes);
         },
         click() {
-          setMarkerSelected(index);
+          setMarkerSelected(props.index);
         },
       }),
       []
@@ -58,8 +58,8 @@ export default function Vertices({
         ref={markerRef}
         eventHandlers={eventHandlers}
         draggable
-        position={marker}
-        icon={index == markerSelected ? redMarker : blueMarker}
+        position={props.marker}
+        icon={props.index == markerSelected ? redMarker : blueMarker}
       />
     );
   };
@@ -67,7 +67,7 @@ export default function Vertices({
   return (
     <>
       {markers?.map((marker, index) => (
-        <NewMarker key={index} index={index} marker={marker} />
+        <NewVertice key={index} index={index} marker={marker} />
       ))}
     </>
   );

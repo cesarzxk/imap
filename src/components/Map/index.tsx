@@ -23,10 +23,6 @@ export default function Map() {
     getAllCountries();
   }, []);
 
-  useEffect(() => {
-    console.log(countries);
-  }, [countries]);
-
   return (
     <MapContainer
       center={{ lat: 35, lng: 20 }}
@@ -47,6 +43,7 @@ export default function Map() {
         {countries?.map((country: countryType) => {
           return (
             <CircleMarker
+              key={country.name}
               radius={4}
               color={"#35A6E7"}
               center={{

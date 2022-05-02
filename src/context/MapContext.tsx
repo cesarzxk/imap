@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { createContext, ReactNode } from "react";
-import { filterCountriesApi, getCountriesApi } from "../services/api";
+import { filterCountriesApi, getCountriesApi } from "../services/Api";
 
 type mapContextData = {
   getAllCountries: () => Promise<void>;
@@ -61,11 +61,10 @@ export function MapProvider({ children }: mapProviderProps) {
       const { data } = await filterCountriesApi.post("", {
         coordinates: markers2Coordinates(),
       });
-
       setCountriesFiltred(data);
       return 200;
     } catch (e) {
-      console.log(500);
+      console.log(e);
       return 500;
     }
   }

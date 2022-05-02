@@ -1,6 +1,6 @@
-import { useState, useRef, useMemo } from "react";
-import { Marker } from "react-leaflet";
+import { useRef, useMemo } from "react";
 
+import { Marker } from "react-leaflet";
 import { Icon, Point } from "leaflet";
 
 type markerType = {
@@ -30,7 +30,6 @@ export default function Edges({ createMarker, edges }: edgesProps) {
   });
 
   const NewRectangleMarker = ({ marker }: { marker: PolygonEdgestype }) => {
-    const markerRef = useRef<any>();
     const eventHandlers = useMemo(
       () => ({
         click() {
@@ -42,7 +41,6 @@ export default function Edges({ createMarker, edges }: edgesProps) {
 
     return (
       <Marker
-        ref={markerRef}
         eventHandlers={eventHandlers}
         position={marker.object}
         icon={rectangleMarker}

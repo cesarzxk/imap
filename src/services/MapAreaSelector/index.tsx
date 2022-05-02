@@ -23,9 +23,10 @@ type PolygonEdgestype = {
 
 export default function MapAreaSelector() {
   const { polygonMarkers, setPolygonMarkers } = useMapContext();
-  const [enabledMarkers, setEnabledMarkers] = useState(false);
 
+  const [enabledMarkers, setEnabledMarkers] = useState(false);
   const [markerSelected, setMarkerSelected] = useState<number>();
+
   const [markers, setMarkers] = useState<markerType[]>([]);
   const [edges, setEdges] = useState<PolygonEdgestype[]>([]);
 
@@ -41,6 +42,7 @@ export default function MapAreaSelector() {
     for (let i = 0; i < polygonMarkers.length - 1; i++) {
       const lat = (polygonMarkers[i].lat + polygonMarkers[i + 1].lat) / 2;
       const lng = (polygonMarkers[i].lng + polygonMarkers[i + 1].lng) / 2;
+      console.log(1);
       newEdges.push({
         parent0: i,
         parent1: i + 1,
@@ -87,6 +89,7 @@ export default function MapAreaSelector() {
             aria-label=""
             borderRadius={25}
             colorScheme={enabledMarkers ? "blue" : "gray"}
+            data-testid="enabledMarkersButton"
             onClick={() => {
               setEnabledMarkers(!enabledMarkers);
             }}
@@ -102,6 +105,7 @@ export default function MapAreaSelector() {
             disabled={markerSelected == undefined}
             borderRadius={25}
             colorScheme={markerSelected != undefined ? "red" : "gray"}
+            data-testid="deleteMarkersButton"
             onClick={() => {
               removeMarker();
             }}

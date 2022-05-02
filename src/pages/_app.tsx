@@ -1,15 +1,15 @@
 import { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
-import { MapProvider } from "../context/MapContext";
+import reportWebVitals from "./reportWebVitals";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
-      <MapProvider>
-        <Component {...pageProps} />
-      </MapProvider>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }
 
 export default MyApp;
+
+reportWebVitals();

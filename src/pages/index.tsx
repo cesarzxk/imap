@@ -1,11 +1,9 @@
-import { Box, Center, Flex, Spinner } from "@chakra-ui/react";
+import { Center, Spinner } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import SendButton from "../components/SendButton";
-import { useMapContext } from "../context/MapContext";
+import Footer from "../containers/Footer";
+import Header from "../containers/Header";
 
 import styles from "./Home.module.css";
 

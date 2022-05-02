@@ -20,6 +20,15 @@ type CustomModaltype = {
   setIsVisible: (isVisible: boolean) => void;
 };
 
+type countryType = {
+  name: string;
+  country: string;
+  location: {
+    type: string;
+    coordinates: number[];
+  };
+};
+
 export default function CustomModal(props: CustomModaltype) {
   const { countriesFiltred } = useMapContext();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -31,6 +40,15 @@ export default function CustomModal(props: CustomModaltype) {
       onClose();
     }
   }, [props.isVisible]);
+
+  const CountryItem = ({ country }: { country: countryType }) => (
+    <>
+      <GridItem>{country.name}</GridItem>
+      <GridItem>{country.country}</GridItem>
+      <GridItem>{country.location.coordinates[1]}</GridItem>
+      <GridItem>{country.location.coordinates[0]}</GridItem>
+    </>
+  );
 
   return (
     <Modal isOpen={isOpen} size="xl" onClose={() => props.setIsVisible(false)}>
@@ -46,12 +64,7 @@ export default function CustomModal(props: CustomModaltype) {
             <GridItem fontWeight="bold">lng</GridItem>
 
             {countriesFiltred?.map((country) => (
-              <>
-                <GridItem>{country.name}</GridItem>
-                <GridItem>{country.country}</GridItem>
-                <GridItem>{country.location.coordinates[1]}</GridItem>
-                <GridItem>{country.location.coordinates[0]}</GridItem>
-              </>
+              <CountryItem key={country.name} country={country} />
             ))}
           </Grid>
         </ModalBody>
