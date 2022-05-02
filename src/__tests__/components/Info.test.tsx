@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Info from ".";
+import Info from "../../components/Info";
 
 describe("Info component", () => {
   it("if Footer have been displayed correctly", () => {

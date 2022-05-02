@@ -1,7 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Edges from ".";
+import Edges from "../../../services/MapAreaSelector/Edges";
 
 const PolygonEdges = [
   {

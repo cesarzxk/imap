@@ -1,7 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import MapAreaSelector from ".";
+import MapAreaSelector from "../../services/MapAreaSelector";
 import { MapContext } from "../../context/MapContext";
 import { act } from "react-dom/test-utils";
 
@@ -35,7 +34,7 @@ let threeMarkersMock = [
   { lat: 3, lng: 3 },
 ];
 
-jest.mock("./Vertices", () => {
+jest.mock("../../services/MapAreaSelector/Vertices", () => {
   return ({
     setMarkerSelected,
     markerSelected,
@@ -59,7 +58,7 @@ jest.mock("./Vertices", () => {
   );
 });
 
-jest.mock("./Edges", () => {
+jest.mock("../../services/MapAreaSelector/Edges", () => {
   return ({
     createMarker,
     edges,

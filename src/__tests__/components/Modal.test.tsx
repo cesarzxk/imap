@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import CustomModal from ".";
+import CustomModal from "../../components/Modal";
 import { MapContext } from "../../context/MapContext";
 import React from "react";
 

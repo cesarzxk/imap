@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import React, { useContext, useEffect } from "react";
 import { fireEvent } from "@testing-library/dom";
 
-import { MapContext, MapProvider } from "./MapContext";
+import { MapContext, MapProvider } from "../../context/MapContext";
 import { act } from "react-dom/test-utils";
 
 const countries = [
@@ -24,7 +24,7 @@ const countries = [
   },
 ];
 
-jest.mock("../services/Api", () => {
+jest.mock("../../services/Api", () => {
   return {
     getCountriesApi: {
       get: jest.fn().mockResolvedValue({ data: countries }),

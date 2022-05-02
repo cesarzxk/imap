@@ -1,6 +1,5 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Header from ".";
+import Header from "../../containers/Header";
 import { MapContext } from "../../context/MapContext";
 
 jest.mock("../../components/Modal", () => {

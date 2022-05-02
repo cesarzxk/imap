@@ -1,12 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Home from ".";
+import Home from "../../pages";
 
-jest.mock("../containers/Footer", () => {
+jest.mock("../../containers/Footer", () => {
   return () => <div>Footer</div>;
 });
 
-jest.mock("../containers/Header", () => {
+jest.mock("../../containers/Header", () => {
   return () => <div>Header</div>;
 });
 

@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import Map from ".";
+import Map from "../../components/Map";
 import { MapContext } from "../../context/MapContext";
 import React from "react";
 

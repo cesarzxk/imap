@@ -5,8 +5,4 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
-  experimental: {
-    runtime: 'nodejs',
-    serverComponents: true,
-  }
 }

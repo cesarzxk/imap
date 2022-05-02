@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Warnning from ".";
+import Warnning from "../../components/Warnning";
 import "@testing-library/jest-dom";
 
 const statusList = {

@@ -5,7 +5,6 @@ import {
   PopoverCloseButton,
   PopoverContent,
   PopoverHeader,
-  PopoverTrigger,
   IconButton,
   Link,
   Text,
