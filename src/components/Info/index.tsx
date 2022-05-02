@@ -13,10 +13,15 @@ import {
 
 import { GrCircleInformation } from "react-icons/gr";
 
+import { PopoverTrigger as OrigPopoverTrigger } from "@chakra-ui/react";
+
+export const PopoverTriggerPached: React.FC<{ children: React.ReactNode }> =
+  OrigPopoverTrigger;
+
 export default function Info() {
   return (
     <Popover>
-      <PopoverTrigger>
+      <PopoverTriggerPached>
         <IconButton
           borderRadius="25"
           w="3rem"
@@ -24,7 +29,7 @@ export default function Info() {
           aria-label=""
           icon={<GrCircleInformation size={25} />}
         />
-      </PopoverTrigger>
+      </PopoverTriggerPached>
 
       <PopoverContent>
         <PopoverArrow />
