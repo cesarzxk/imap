@@ -33,7 +33,7 @@ export default function Vertices({
 
   const redMarker = new Icon({
     iconUrl: "/redmarker.svg",
-    iconRetinaUrl: "/marker.svg",
+    iconRetinaUrl: "/redmarker.svg",
     iconSize: new Point(10, 10),
   });
 
