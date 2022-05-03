@@ -111,7 +111,7 @@ $ git clone https://github.com/cesarzxk/desafio-isket.git
 $ yarn
 
 # Ao finalizar, rodar o web-app
-$ yarn start
+$ yarn dev
 ```
 
 ## 🤔 Como contribuir ?
