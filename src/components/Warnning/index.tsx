@@ -43,9 +43,10 @@ function Warnning({ status, setStatus, params }: warnningProps) {
     <></>
   ) : (
     <Alert
-      zIndex={100}
+      zIndex={8}
       position="absolute"
-      top="13%"
+      top="11%"
+      w={"100%"}
       data-testid="alert"
       status={currentType}
     >

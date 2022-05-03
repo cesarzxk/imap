@@ -7,7 +7,7 @@ export default function Footer() {
       alignContent="center"
       justifyContent="center"
       w="100%"
-      h="6rem"
+      h="14%"
       bg="linear-gradient(180deg, #FFFFFF 0%, #DEDEDE 100%)"
       borderTop="1px solid #ddd"
     >

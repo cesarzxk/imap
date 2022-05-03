@@ -10,6 +10,7 @@ import {
   ModalFooter,
   Grid,
   GridItem,
+  Box,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 

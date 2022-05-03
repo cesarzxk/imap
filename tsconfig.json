@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/hooks/useDimensions.JS", ],
   "exclude": ["node_modules","src/__tests__/Home.test.tsxsrc/__tests__/Map.test.tsx.tssrc/__tests__/MapAreaSelector.test.tsx.tsx"]
 }

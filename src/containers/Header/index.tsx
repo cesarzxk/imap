@@ -12,7 +12,6 @@ export default function Header() {
   const { getFiltredCountries, polygonMarkers } = useMapContext();
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const [requestStatus, setRequestStatus] = useState(0);
 
   async function onsubmit() {
@@ -29,7 +28,7 @@ export default function Header() {
     <>
       <HStack
         borderBottom="1px solid #ddd"
-        h="17%"
+        h="14%"
         w="100%"
         paddingY="1rem"
         paddingX="1rem"

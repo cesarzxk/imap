@@ -42,7 +42,6 @@ export default function MapAreaSelector() {
     for (let i = 0; i < polygonMarkers.length - 1; i++) {
       const lat = (polygonMarkers[i].lat + polygonMarkers[i + 1].lat) / 2;
       const lng = (polygonMarkers[i].lng + polygonMarkers[i + 1].lng) / 2;
-      console.log(1);
       newEdges.push({
         parent0: i,
         parent1: i + 1,

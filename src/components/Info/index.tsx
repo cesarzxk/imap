@@ -25,12 +25,13 @@ export default function Info() {
           borderRadius="25"
           w="3rem"
           h="3rem"
+          bg="#fff"
           aria-label=""
           icon={<GrCircleInformation size={25} />}
         />
       </PopoverTriggerPached>
 
-      <PopoverContent>
+      <PopoverContent zIndex={15}>
         <PopoverArrow />
         <PopoverCloseButton />
         <PopoverHeader fontWeight="bold">Bem-vindo!</PopoverHeader>

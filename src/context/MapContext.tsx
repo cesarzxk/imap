@@ -34,7 +34,6 @@ type polygonType = {
 export function MapProvider({ children }: mapProviderProps) {
   const [countries, setCountries] = useState<countryType[]>([]);
   const [polygonMarkers, setPolygonMarkers] = useState<polygonType[]>([]);
-
   const [countriesFiltred, setCountriesFiltred] = useState<countryType[]>([]);
 
   function markers2Coordinates() {
