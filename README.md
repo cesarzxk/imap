@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Logo" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651607018/desafio-isket/Icon_vpojvx.svg" width="300px">
+  <img alt="Logo" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652191838/desafio-isket/Icon_gw2k7k.svg" width="300px">
  
 </h1>
 
@@ -51,12 +51,14 @@ Essa aplicação visa solucionar um problema imposto via um desafio front-end, o
 Imagens do aplicativo em operação via desktop.
 
 <p align="center">
-<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163238_szu8wp.png" width="300px">
-<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163302_hwwel2.png" width="300px">
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652194880/desafio-isket/Captura_de_tela_2022-05-03_163238_dv7dfh.png" width="300px">
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652194880/desafio-isket/Captura_de_tela_2022-05-10_115853_eeklxn.png" width="300px">
 </p>
 
 <p align="center">
-<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163330_gjmws0.png" width="300px">
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652194880/desafio-isket/Captura_de_tela_2022-05-10_115907_gr4hbz.png" width="300px">
+
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606922/desafio-isket/Captura_de_tela_2022-05-03_163742_sgl9fr.png" width="300px">
 </p>
 
 ## 📸 Capturas de tela via Web Mobile
@@ -64,8 +66,8 @@ Imagens do aplicativo em operação via desktop.
 Imagens do aplicativo em operação via mobile.
 
 <p align="center">
-<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163836_qgnlia.png" width="170px">
-<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163940_b5umgr.png" width="170px">
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652194880/desafio-isket/Captura_de_tela_2022-05-10_120001_afnt5s.png" width="170px">
+<img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1652194880/desafio-isket/Captura_de_tela_2022-05-10_120021_k5ooyd.png" width="170px">
 <img alt="ScreenShot01" src="https://res.cloudinary.com/da91uwz7j/image/upload/v1651606921/desafio-isket/Captura_de_tela_2022-05-03_163910_lstchm.png" width="170px">
 </p>
 
